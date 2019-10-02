@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public float horizontalForce;
     public float forwardForce;
     public float backwardsForce;
+    public float turnSpeed;
+    private int jumps;
 
     void Start() { }
 
@@ -26,32 +28,32 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
-            rb.AddForce(horizontalForce * Time.deltaTime, 0, 0);
+            rb.AddRelativeForce(horizontalForce * Time.deltaTime, 0, 0);
         }
 
         if (Input.GetKey(KeyCode.A)) 
-        { 
-            rb.AddForce(-horizontalForce * Time.deltaTime, 0, 0); 
+        {
+            rb.AddRelativeForce(-horizontalForce * Time.deltaTime, 0, 0);
         }
 
         if (Input.GetKey(KeyCode.W))
         {
-            rb.AddForce(0, 0, forwardForce * Time.deltaTime);
+            rb.AddRelativeForce(0, 0, forwardForce * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            rb.AddForce(0, 0, -backwardsForce * Time.deltaTime);
+            rb.AddRelativeForce(0, 0, -backwardsForce * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.Q))
         {
-            rb.AddTorque(0, 10, 0);
+            rb.AddTorque(0, -turnSpeed, 0);
         }
 
         if (Input.GetKey(KeyCode.E))
         {
-            rb.AddTorque(0, -10, 0);
+            rb.AddTorque(0, turnSpeed, 0);
         }
     }
 }
