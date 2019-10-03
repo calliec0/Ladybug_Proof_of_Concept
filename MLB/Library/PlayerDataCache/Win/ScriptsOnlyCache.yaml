@@ -2,7 +2,10 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - MainMenu
+    - PauseMenu
+    - Player2Movement
     - PlayerMovement
+    - PlayerSelect
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -43,29 +46,61 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11134}
+      Script: {instanceID: 9694}
+    - Class: 114
+      Script: {instanceID: 9882}
+    - Class: 114
+      Script: {instanceID: 10250}
+    - Class: 114
+      Script: {instanceID: 10584}
+    - Class: 114
+      Script: {instanceID: 10792}
+    - Class: 114
+      Script: {instanceID: 10964}
+    - Class: 114
+      Script: {instanceID: 11022}
+    - Class: 114
+      Script: {instanceID: 11160}
+    - Class: 114
+      Script: {instanceID: 11364}
+    - Class: 114
+      Script: {instanceID: 12674}
+    - Class: 114
+      Script: {instanceID: 18810}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 134
       Script: {instanceID: 0}
     - Class: 136
-      Script: {instanceID: 0}
-    - Class: 137
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     - Class: 258
       Script: {instanceID: 0}
@@ -93,29 +128,31 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9670}
+      Script: {instanceID: 9694}
     - Class: 114
-      Script: {instanceID: 9858}
+      Script: {instanceID: 9882}
     - Class: 114
-      Script: {instanceID: 10224}
+      Script: {instanceID: 10058}
     - Class: 114
-      Script: {instanceID: 10244}
+      Script: {instanceID: 10250}
     - Class: 114
-      Script: {instanceID: 10558}
+      Script: {instanceID: 10270}
     - Class: 114
-      Script: {instanceID: 10766}
+      Script: {instanceID: 10584}
     - Class: 114
-      Script: {instanceID: 10780}
+      Script: {instanceID: 10792}
     - Class: 114
-      Script: {instanceID: 10938}
+      Script: {instanceID: 10806}
     - Class: 114
-      Script: {instanceID: 10996}
+      Script: {instanceID: 10964}
     - Class: 114
-      Script: {instanceID: 11144}
+      Script: {instanceID: 11022}
     - Class: 114
-      Script: {instanceID: 11338}
+      Script: {instanceID: 11170}
     - Class: 114
-      Script: {instanceID: 15072}
+      Script: {instanceID: 11364}
+    - Class: 114
+      Script: {instanceID: 38774}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -257,6 +294,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: AspectRatioFitter
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenu
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -553,6 +596,24 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
+      Hash: aaaba2dcb2852e4b5b65c9277b7bd976
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player2Movement
+  - hash:
+      serializedVersion: 2
+      Hash: c8c5e65e9fb858572516474d6e2102bc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenu
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerSelect
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -561,4 +622,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Git/MLB POC/Ladybug_Proof_of_Concept/MLB/Gamer 2.0.exe
+  playerPath: E:/Documents/GitHub/Ladybug_Proof_of_Concept/MLB/Build0.01/Gamer 2.0.exe
