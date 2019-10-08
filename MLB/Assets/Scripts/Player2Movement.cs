@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player2Movement : MonoBehaviour
 {
+    public GameObject arm;
     public Rigidbody rb;
     public float verticalForce;
     public float horizontalForce;
@@ -16,9 +17,19 @@ public class Player2Movement : MonoBehaviour
 
     // Start is called before the first frame update
 
+    void OnCollisionEnter(UnityEngine.Collision collisionInfo)
+    {
+        if (collisionInfo.gameObject.CompareTag("Damaging"))
+        {
+            Debug.Log("BeanNoir has been hit!");
+        }
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
+
+
         // adding vertical force 
         if (Input.GetKeyDown(KeyCode.Keypad0))
         {
@@ -53,6 +64,11 @@ public class Player2Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.Keypad9))
         {
             rb.AddTorque(0, turnSpeed, 0);
+        }
+
+        if (Input.GetKey(KeyCode.KeypadPlus))
+        {
+            arm.GetComponent<Animator>().SetTrigger("punch");
         }
     }
 }

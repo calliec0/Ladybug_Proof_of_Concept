@@ -25,15 +25,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collisionInfo.gameObject.CompareTag("Damaging"))
         {
-            rb.AddForce(collisionInfo.relativeVelocity);
+            Debug.Log("LadyBean has been hit!");
         }
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-
-        rb.ResetCenterOfMass();
         
         // adding vertical force 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -44,13 +42,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             rb.AddRelativeForce(horizontalForce * Time.deltaTime, 0, 0);
-            rb.AddTorque(0, turnSpeed, 0);
+            
         }
 
         if (Input.GetKey(KeyCode.A)) 
         {
             rb.AddRelativeForce(-horizontalForce * Time.deltaTime, 0, 0);
-            rb.AddTorque(0, -turnSpeed, 0);
+            
         }
 
         if (Input.GetKey(KeyCode.W))
@@ -63,7 +61,17 @@ public class PlayerMovement : MonoBehaviour
             rb.AddRelativeForce(0, 0, -backwardsForce * Time.deltaTime);
         }
 
+        if (Input.GetKey(KeyCode.Q))
+        {
+            rb.AddTorque(0, -turnSpeed, 0);
+        }
+
         if (Input.GetKey(KeyCode.E))
+        {
+            rb.AddTorque(0, turnSpeed, 0);
+        }
+
+        if (Input.GetKey(KeyCode.F))
         {
             arm.GetComponent<Animator>().SetTrigger("punch");
         }
