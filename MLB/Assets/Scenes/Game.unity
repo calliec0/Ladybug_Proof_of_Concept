@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1467,22 +1467,22 @@ PrefabInstance:
     - target: {fileID: -6057140222963153312, guid: 38997aa75d8174a4fb18cd7b7cbe64f5,
         type: 3}
       propertyPath: m_UpdateMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 38997aa75d8174a4fb18cd7b7cbe64f5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.28
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 38997aa75d8174a4fb18cd7b7cbe64f5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.33
+      value: 1.116
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 38997aa75d8174a4fb18cd7b7cbe64f5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 11.94
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 38997aa75d8174a4fb18cd7b7cbe64f5,
         type: 3}
@@ -2772,8 +2772,8 @@ Rigidbody:
   m_Mass: 50
   m_Drag: 0.02
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2794,7 +2794,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.03
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: -12, z: 0}
+  m_Center: {x: 0, y: -11.91, z: -12.83}
 --- !u!64 &1882309620
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2802,11 +2802,11 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882309615}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 56ea1914b05cbb5488bcac98eaec4ca9, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -5495902117074765545, guid: 38997aa75d8174a4fb18cd7b7cbe64f5, type: 3}
 --- !u!1 &1918059572
