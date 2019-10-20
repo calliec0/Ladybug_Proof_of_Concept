@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -151,6 +151,7 @@ MonoBehaviour:
   forwardForce: 50000
   backwardsForce: 43000
   turnSpeed: 100
+  jumps: 0
 --- !u!1 &117277066
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,7 +1355,7 @@ Transform:
   - {fileID: 1223045743}
   - {fileID: 1786484149}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1105271362
 GameObject:
@@ -1464,6 +1465,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: -7780734103960978560, guid: 38997aa75d8174a4fb18cd7b7cbe64f5,
+        type: 3}
+      propertyPath: m_Quality
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: 38997aa75d8174a4fb18cd7b7cbe64f5,
         type: 3}
       propertyPath: m_Controller
@@ -1527,7 +1533,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 38997aa75d8174a4fb18cd7b7cbe64f5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 38997aa75d8174a4fb18cd7b7cbe64f5,
         type: 3}
@@ -1564,11 +1570,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.32
       objectReference: {fileID: 0}
-    - target: {fileID: -7780734103960978560, guid: 38997aa75d8174a4fb18cd7b7cbe64f5,
-        type: 3}
-      propertyPath: m_Quality
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: -5716681864270162303, guid: 38997aa75d8174a4fb18cd7b7cbe64f5,
         type: 3}
       propertyPath: m_Enabled
@@ -1587,6 +1588,7 @@ GameObject:
   - component: {fileID: 1212831572}
   - component: {fileID: 1212831574}
   - component: {fileID: 1212831573}
+  - component: {fileID: 1212831575}
   m_Layer: 0
   m_Name: TestPersonCamera
   m_TagString: Untagged
@@ -1602,11 +1604,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1212831571}
   m_LocalRotation: {x: 0.078459114, y: -0, z: -0, w: 0.99691737}
-  m_LocalPosition: {x: 0, y: 15, z: -15}
+  m_LocalPosition: {x: -1.28, y: 15.31, z: -3.5900002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1882309617}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 9, y: 0, z: 0}
 --- !u!81 &1212831573
 AudioListener:
@@ -1659,6 +1661,20 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1212831575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212831571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af424b28dab8ea044af2edb260fd57de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1882309617}
+  offset: {x: 0, y: 15, z: -15}
 --- !u!1 &1223045741
 GameObject:
   m_ObjectHideFlags: 0
@@ -2023,7 +2039,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1323857712
 MonoBehaviour:
@@ -2433,7 +2449,7 @@ RectTransform:
   - {fileID: 907524498}
   - {fileID: 141658473}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2868,7 +2884,7 @@ RectTransform:
   m_Children:
   - {fileID: 434945713}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2966,6 +2982,8 @@ MonoBehaviour:
   forwardMoveSpeed: {x: 0, y: 0, z: 1}
   backwardMoveSpeed: {x: 0, y: 0, z: -1}
   strafeMoveSpeed: {x: 1, y: 0, z: 0}
+  faceRight: {x: 0, y: 90, z: 0, w: 0}
+  faceLeft: {x: 0, y: -90, z: 0, w: 0}
   playerAnimatorController: {fileID: 9100000, guid: 208e406d5a642d244a1cef50287741e0,
     type: 2}
 --- !u!1 &1918059572
@@ -3369,6 +3387,7 @@ MonoBehaviour:
   forwardForce: 50000
   backwardsForce: 43500
   turnSpeed: 55
+  jumps: 0
 --- !u!33 &5958013931511070958
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3392,7 +3411,7 @@ Transform:
   - {fileID: 8527978337947826609}
   - {fileID: 154876920}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &6473423628930149503
 Transform:
@@ -3535,7 +3554,7 @@ PrefabInstance:
     - target: {fileID: 8540344435459172829, guid: 83128b1ea40243a4690cdf7c938b6774,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8540344435459172829, guid: 83128b1ea40243a4690cdf7c938b6774,
         type: 3}

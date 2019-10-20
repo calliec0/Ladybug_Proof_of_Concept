@@ -11,6 +11,8 @@ public class PlayerControls : MonoBehaviour
     public Vector3 forwardMoveSpeed;
     public Vector3 backwardMoveSpeed;
     public Vector3 strafeMoveSpeed;
+    public Quaternion faceRight = new Quaternion(0, 90, 0, 0);
+    public Quaternion faceLeft = new Quaternion(0, -90, 0, 0);
 
     public UnityEditor.Animations.AnimatorController playerAnimatorController;
 
@@ -51,11 +53,11 @@ public class PlayerControls : MonoBehaviour
         if(Input.GetAxis("Horizontal") > 0)
         {
             controller.Move(strafeMoveSpeed);
-            controller.gameObject.transform.Rotate(0, 90*Time.deltaTime, 0, Space.Self);
+            controller.gameObject.transform.Rotate(0, 90, 0);
         } else if (Input.GetAxis("Horizontal") < 0)
         {
             controller.Move(-strafeMoveSpeed);
-            controller.gameObject.transform.Rotate(0, -90 * Time.deltaTime, 0, Space.Self);
+            controller.gameObject.transform.Rotate(0, -90, 0);
         }
 
     }
