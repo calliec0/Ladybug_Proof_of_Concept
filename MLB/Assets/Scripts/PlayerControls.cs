@@ -53,11 +53,11 @@ public class PlayerControls : MonoBehaviour
         if(Input.GetAxis("Horizontal") > 0)
         {
             controller.Move(strafeMoveSpeed);
-            controller.gameObject.transform.Rotate(0, 90, 0);
+            //controller.gameObject.transform.Rotate(0, 90, 0);
         } else if (Input.GetAxis("Horizontal") < 0)
         {
             controller.Move(-strafeMoveSpeed);
-            controller.gameObject.transform.Rotate(0, -90, 0);
+            //controller.gameObject.transform.Rotate(0, -90, 0);
         }
 
     }
