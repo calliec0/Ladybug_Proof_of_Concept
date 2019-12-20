@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1508,6 +1508,12 @@ Transform:
   m_Father: {fileID: 950330699}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1139524996 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1707243787577406375, guid: 38997aa75d8174a4fb18cd7b7cbe64f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1378449517}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1212831571
 GameObject:
   m_ObjectHideFlags: 0
@@ -1604,7 +1610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af424b28dab8ea044af2edb260fd57de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1477386696}
+  player: {fileID: 1139524996}
   offset: {x: 0, y: 15, z: -20}
 --- !u!1 &1223045741
 GameObject:
@@ -2008,6 +2014,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: person_test
       objectReference: {fileID: 0}
+    - target: {fileID: -7780734103960978560, guid: 38997aa75d8174a4fb18cd7b7cbe64f5,
+        type: 3}
+      propertyPath: m_RootBone
+      value: 
+      objectReference: {fileID: 2115568294}
     - target: {fileID: -6057140222963153312, guid: 38997aa75d8174a4fb18cd7b7cbe64f5,
         type: 3}
       propertyPath: m_Controller
@@ -2073,11 +2084,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7780734103960978560, guid: 38997aa75d8174a4fb18cd7b7cbe64f5,
-        type: 3}
-      propertyPath: m_RootBone
-      value: 
-      objectReference: {fileID: 2115568294}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38997aa75d8174a4fb18cd7b7cbe64f5, type: 3}
 --- !u!1 &1477386692 stripped
@@ -2098,12 +2104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08427b5ad0c0bd46a0b89e78066ca14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1477386696 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 38997aa75d8174a4fb18cd7b7cbe64f5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1378449517}
-  m_PrefabAsset: {fileID: 0}
+  speed: 30
+  controller: {fileID: 0}
 --- !u!143 &1477386697
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2113,15 +2115,15 @@ CharacterController:
   m_GameObject: {fileID: 1477386692}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Height: 13
-  m_Radius: 2.08
+  m_Height: 13.11
+  m_Radius: 2
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.0001
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 6.5}
+  m_Center: {x: 0, y: 6.4, z: 0}
 --- !u!114 &1477386699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2379,7 +2381,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
