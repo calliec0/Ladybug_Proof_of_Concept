@@ -5,13 +5,15 @@ using UnityEngine;
 public class CorTutorialsMovement : MonoBehaviour
 {
     // Start is called before the first frame update
-    float speed = 5f;
+    [SerializeField] float speed = 5f;
     float rotationSpeed = 100f;
     Animator anim;
+    [SerializeField] private CharacterController controller;
 
     void Start()
     {
-        anim = this.GetComponent<Animator>();
+        anim = GetComponent<Animator>();
+        controller = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -34,5 +36,21 @@ public class CorTutorialsMovement : MonoBehaviour
             anim.SetBool("Running", false);
             anim.SetFloat("CharacterSpeed", 0); 
         }
+
+        bool isCrouching = Input.GetAxis("Crouch") > 0f;
+
+        if (isCrouching)
+        {
+            anim.SetBool("isCrouching", true);
+            anim.SetBool("Running", false);
+            anim.SetFloat("CharacterSpeed", 0f);
+        }
+        else
+        {
+            anim.SetBool("isCrouching", false);
+            anim.SetFloat("CharacterSpeed", translation);
+        }
+
+        
     }
 }
